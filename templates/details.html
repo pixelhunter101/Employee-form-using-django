@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Employee Form</h1>
+   <form action="info" method="POST">
+    {% csrf_token %}
+    
+    Name 
+    <dir><input type="text" id ="name" name="name" maxlength="20" /></dir><br>
+    
+    Password 
+    <dir><input type="password" id="pass" name="pass"><br></dir>
+    
+    Address 
+    <dir><textarea rows="4" cols="80" id="address" name="address"></textarea></textarea><br></dir>
+    
+    City 
+    <select id="City" name="City">
+       <option value="New Delhi">Delhi</option>
+       <option value="Kolkata">Kolkata</option>
+       <option value="Neemrana">Neemranar</option>
+       <option value="Jamshedpur">Jamshedpur</option>
+   </select><br><br>
+
+    Gender<br>
+    <input type="radio" value="Male" name="gender" />Male<br>
+    <input type="radio" value="Female" name="gender" />Female<br><br>
+
+   Vehicles <br>
+   <input type="checkbox" value="Scooter" name="vehicle">Scooter<br>
+   <input type="checkbox" value="Bike" name="vehicle">Bike<br>
+   <input type="checkbox" value="car" name="vehicle">Car<br><br>
+
+   Salary
+   <input type="number" id="salary" name="salary"><br>
+
+
+   Date Of Birth 
+   <input type="date" name="date_of_birth" /><br>
+   
+   <input type="Submit" value="Submit" />
+</form>
+
+</body>
+</html>
